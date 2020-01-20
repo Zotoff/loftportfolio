@@ -33,6 +33,6 @@ module.exports = function() {
       .on('error', function(error) {
         console.log(error);
       })
-      .pipe($.gulp.dest($.config.dev + '/scss/sprite'));
+      .pipe($.gulp.dest($.config.build + '/images/sprite'));
   });
 };

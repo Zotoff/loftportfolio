@@ -1,3 +1,13 @@
 @import 'common/_variables';
 @import 'common/_fonts';
 @import 'common/_mixins';
+@import 'common/_base';
+
+@import 'sprite/symbol/scss/sprite';
+@import 'blocks/down-arrow.scss';
+@import 'blocks/hero.scss';
+@import 'blocks/section-title.scss';
+@import 'blocks/title.scss';
+@import 'blocks/triangle.scss';
+@import 'blocks/user.scss';
+@import 'blocks/about.scss';

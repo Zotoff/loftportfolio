@@ -9,4 +9,5 @@ module.exports = [
     './gulp/tasks/fontscopy.js',
     './gulp/tasks/images.js',
     './gulp/tasks/serve.js',
+    './gulp/tasks/spritescopy.js',
 ];

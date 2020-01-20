@@ -1,0 +1,71 @@
+extends ./template.pug
+
+block content
+  section.section.hero
+    ul.socials
+      each item in ['vk', 'gh', 'in']
+        li.socials__item
+          a(href="" class=`socials__link socials__link_${item}`)
+    a(href="").hamburger
+    a(href="").down-arrow
+        +icon('arrow_down','beige_mod')
+    .hero__title
+      img(src="img/mountains-bg.png", alt="").section-title
+      .user.hero__user-block
+        .user__photo
+        .user__name Павел Зотов
+        .user__desc Веб-разработчик из Александрова
+  section.section.about
+    .about__left
+      svg(
+          viewbox="0 0 1000 100"
+          preserveAspectRatio = "none"
+          class="triangle triange__fill__white about__triangles")
+            polygon(points="0,0 0,100 1000,100")
+      .title.about__section-title
+        | Обо мне 
+      .user-about
+        .user-about__picture
+        .user-about__title
+          .subtitle
+            | Кто я
+        .user-about__text
+          p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+          p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+    .about__right
+      svg(
+          viewbox="0 0 1000 100"
+          preserveAspectRatio = "none"
+          class="triangle triange__fill__beige about__triangles")
+            polygon(points="0,100 1000,100 1000,0")
+      .about-data
+        .about-data__description.about-user-info
+          .about-user-info__title
+            .subtitle Чем я могу быть полезен
+          .about-user-info__text
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam officia incidunt, quisquam sit harum totam, perspiciatis nesciunt, culpa at, laborum nobis error. In doloremque iusto rem, alias incidunt, expedita quos.
+        .about-data__content
+          ul.skills
+              each skill in ['frontend', 'backend']
+                  li.skills__item
+                    .skill-section
+                      .skill-section__title= skill
+                      ul.skill-section__list
+                        each skillTitle in ['html5', 'css3']
+                          li.skills-section__item
+                            .skill
+                              svg.skill__circle
+                              .skill__name= skillTitle
+          //- ul.skills
+          //-   each skill in ['Frontend', 'Backend', 'WorkFlow']
+          //-     li.skills__item
+          //-       .skill-section
+          //-         .skill-section__title= skill
+          //-         ul.skill-section__list
+          //-           each skillName in ['HTML5', 'CSS3', 'jQuery']
+          //-             li.skills-section__item
+          //-               .skill
+          //-                 svg.skill__circle
+          //-                 .skill__name= skillName
+  section.section.map
+
