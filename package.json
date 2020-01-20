@@ -1,0 +1,48 @@
+{
+  "name": "loftportfolio",
+  "version": "1.0.0",
+  "description": "Educational Loftschool Portfolio",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-ext-replace": "^0.3.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^7.0.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-load-plugins": "^2.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^2.2.0",
+    "gulp-uglify": "^3.0.2",
+    "imagemin": "^7.0.1",
+    "imagemin-webp": "^5.1.0",
+    "jshint": "^2.11.0",
+    "sass-blocks": "0.0.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1",
+    "yarn": "^1.21.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "build": "webpack",
+    "start": "webpack --watch"
+  },
+  "author": "Zotoff",
+  "license": "ISC"
+}
