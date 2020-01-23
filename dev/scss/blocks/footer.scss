@@ -1,0 +1,38 @@
+footer {
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, .6);
+    padding-top: 30px;
+    padding-bottom: 20px;
+    @include flex(center, center);
+    & .container {
+        max-width: 1200px;
+        @include flex(center, center)
+    }
+}
+.footer__top,
+.footer__bottom {
+    @include flex(space-between, center)
+}
+.footer__top__left,
+.footer__top__right {
+    width: 49%;
+    @include flex(center, center);
+    padding-bottom: 30px;
+}
+.footer__menu {
+    @include flex(flex-start, center)
+}
+.footer__menu__item {
+    margin-right: 25px;
+    @include roboto-medium;
+    font-size: 15px;
+    color: $white;
+    & a {
+        text-decoration: none;
+        transition: all .5s;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

@@ -25,7 +25,7 @@ module.exports = function() {
         .pipe($.gp.rename({
             suffix: '.min'
         }))
-        .pipe($.gulp.dest('./build/style/'))
+        .pipe($.gulp.dest('./build/style/'));
     });
-}
+};
 

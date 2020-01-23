@@ -1,0 +1,58 @@
+.skill {
+    width: 110px;
+    height: 110px;
+}
+.skill-section {
+    @include flex(center, center)
+}
+.skill-section__title {
+    width: 100%;
+    @include roboto-medium;
+    color: $main-font-color;
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 20px;
+}
+.skill-section__list {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    @include flex(space-between, center)
+}
+.skill-section__item {
+    width: 130px;
+    height: 130px;
+    @include flex(flex-start, center);
+}
+.skill {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.skill__circle {
+    fill: none;
+    stroke-width: 25;
+}
+.sector {
+    stroke-dasharray: 314; //2*radius*Math.Pi
+    stroke-dashoffset: 157; //% from stroke-dashoffset
+    transition: all 1s;
+}
+.skill__name {
+    @include roboto-medium;
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    top: 30px;
+    left: 48%;
+    margin-left: -25%;
+    background-color: $beige;
+    border-radius: 50%;
+    @include flex(center, center);
+    & p {
+        font-size: 12px;
+        line-height: 1.2em;
+        color: $green;
+        text-transform: uppercase
+    }
+}

@@ -2,12 +2,17 @@
 @import 'common/_fonts';
 @import 'common/_mixins';
 @import 'common/_base';
+@import 'sprite/symbol/scss/sprite';
 
 @import 'sprite/symbol/scss/sprite';
 @import 'blocks/down-arrow.scss';
 @import 'blocks/hero.scss';
 @import 'blocks/section-title.scss';
 @import 'blocks/title.scss';
+@import 'blocks/map.scss';
+@import 'blocks/subtitle.scss';
 @import 'blocks/triangle.scss';
+@import 'blocks/skills.scss';
 @import 'blocks/user.scss';
 @import 'blocks/about.scss';
+@import 'blocks/footer.scss';

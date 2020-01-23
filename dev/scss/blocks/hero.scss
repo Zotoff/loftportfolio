@@ -8,9 +8,19 @@
   @include centered(y);
   text-align: center;
   width: 100%;
+  height: auto;
 }
 
 .hero__user-block {
   @include centered();
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background: url('../img/about_header.png') no-repeat center;
+    width: 100%;
+    height: auto;
+    background-size: contain;
+  }
 }
 

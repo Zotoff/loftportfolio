@@ -2,3 +2,9 @@ mixin icon(name,mod)
         - mod = mod || ''
         svg(class="icon icon-" + name + ' ' + mod)
                 use(xlink:href="img/sprite.svg#" + name)
+
+mixin webp(image, format)
+        picture
+                source(srcset="img/"+image+".webp", type="image/webp")
+                source(srcset="img/"+image+"."+format+"", type="image/"+format+"")
+                img(src="img/"+image+"."+format+"", alt="Alt Text!")

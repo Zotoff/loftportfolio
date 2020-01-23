@@ -3,16 +3,19 @@ extends ./template.pug
 block content
   section.section.hero
     ul.socials
-      each item in ['vk', 'gh', 'in']
+      each item in ['vk', 'github', 'link']
         li.socials__item
           a(href="" class=`socials__link socials__link_${item}`)
+            +icon(`${item}`, 'beige_mod')
     a(href="").hamburger
+      +icon('hamburger', 'beige_mod')
     a(href="").down-arrow
         +icon('arrow_down','beige_mod')
     .hero__title
       img(src="img/mountains-bg.png", alt="").section-title
       .user.hero__user-block
         .user__photo
+          +webp('avatar', 'png')
         .user__name Павел Зотов
         .user__desc Веб-разработчик из Александрова
   section.section.about
@@ -20,23 +23,25 @@ block content
       svg(
           viewbox="0 0 1000 100"
           preserveAspectRatio = "none"
-          class="triangle triange__fill__white about__triangles")
+          class="triangle triangle_fill_white about__triangles")
             polygon(points="0,0 0,100 1000,100")
-      .title.about__section-title
-        | Обо мне 
-      .user-about
-        .user-about__picture
-        .user-about__title
-          .subtitle
-            | Кто я
-        .user-about__text
-          p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-          p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+      .about__content
+        .title.about__section-title
+          h2.about__section-title_heading Обо мне
+        .user-about
+          .user-about__picture
+            +webp('about__hero', 'png')
+          .user-about__title
+            .subtitle
+              | Кто я
+          .user-about__text
+            p Я веб разработчик из Александрова. Мне 33 года и я люблю фронт-энд. Мне нравится делать классные проекты. А еще я работаю инженером на заводе.
+            p Этот сайт я сделал с любовью к LoftSchool.
     .about__right
       svg(
           viewbox="0 0 1000 100"
           preserveAspectRatio = "none"
-          class="triangle triange__fill__beige about__triangles")
+          class="triangle triangle_fill_beige about__triangles")
             polygon(points="0,100 1000,100 1000,0")
       .about-data
         .about-data__description.about-user-info
@@ -46,26 +51,57 @@ block content
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam officia incidunt, quisquam sit harum totam, perspiciatis nesciunt, culpa at, laborum nobis error. In doloremque iusto rem, alias incidunt, expedita quos.
         .about-data__content
           ul.skills
-              each skill in ['frontend', 'backend']
+              each skill in ['Frontend']
                   li.skills__item
                     .skill-section
                       .skill-section__title= skill
                       ul.skill-section__list
-                        each skillTitle in ['html5', 'css3']
-                          li.skills-section__item
+                        each skillTitle in ['html5', 'css3', 'JS & jQuery']
+                          li.skill-section__item
                             .skill
-                              svg.skill__circle
-                              .skill__name= skillTitle
-          //- ul.skills
-          //-   each skill in ['Frontend', 'Backend', 'WorkFlow']
-          //-     li.skills__item
-          //-       .skill-section
-          //-         .skill-section__title= skill
-          //-         ul.skill-section__list
-          //-           each skillName in ['HTML5', 'CSS3', 'jQuery']
-          //-             li.skills-section__item
-          //-               .skill
-          //-                 svg.skill__circle
-          //-                 .skill__name= skillName
+                              svg(width="130" height="130").skill__circle
+                                circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
+                                circle(r="50" cx="65" cy="65" stroke="#10c1a8" class="sector")
+                              .skill__name
+                                p= skillTitle
+              each skill in ['Backend']
+                  li.skills__item
+                    .skill-section
+                      .skill-section__title= skill
+                      ul.skill-section__list
+                        each skillTitle in ['php', 'mysql', 'NodeJS']
+                          li.skill-section__item
+                            .skill
+                              svg(width="130" height="130").skill__circle
+                                circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
+                                circle(r="50" cx="65" cy="65" stroke="#10c1a8" class="sector")
+                              .skill__name
+                                p= skillTitle
+              each skill in ['Workflow']
+                  li.skills__item
+                    .skill-section
+                      .skill-section__title= skill
+                      ul.skill-section__list
+                        each skillTitle in ['git', 'webpack', 'gulp']
+                          li.skill-section__item
+                            .skill
+                              svg(width="130" height="130").skill__circle
+                                circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
+                                circle(r="50" cx="65" cy="65" stroke="#10c1a8" class="sector")
+                              .skill__name
+                                p= skillTitle
   section.section.map
+    img(src="img/map.png", alt="")
+    .map__contacts
+      .map__contacts__wrapper
+        h2.subtitle Контакты
+        .map__contacts__item
+          +icon('skype', 'green_mod')
+          a(href="") fathummel
+        .map__contacts__item
+          +icon('envelope', 'green_mod')
+          a(href="mailto:paulzotoff@gmail.com") paulzotoff@gmail.com
+        .map__contacts__item
+          +icon('phone', 'green_mod')
+          a(href="tel:+79042543584") +7 904 254 35 84
 
