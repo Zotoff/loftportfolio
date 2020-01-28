@@ -5,6 +5,9 @@ footer {
     padding-top: 30px;
     padding-bottom: 20px;
     @include flex(center, center);
+
+    position: absolute;
+    bottom: 0px;
     & .container {
         max-width: 1200px;
         @include flex(center, center)
@@ -12,16 +15,34 @@ footer {
 }
 .footer__top,
 .footer__bottom {
-    @include flex(space-between, center)
+    @include flex(space-between, flex-start);
+    width: 100%;
+}
+.footer__top {
+  border-bottom: 1px solid rgba(255, 255, 255, .8);
+}
+.footer__bottom {
+  margin-top: 15px;
+}
+.footer__bottom__text {
+    @include roboto-light();
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    opacity: 0.6;
+}
+.footer__bottom__text p {
+    color: #ffffff;
+    opacity: 0.6;
 }
 .footer__top__left,
 .footer__top__right {
     width: 49%;
-    @include flex(center, center);
-    padding-bottom: 30px;
+    @include flex(flex-start, center);
 }
 .footer__menu {
-    @include flex(flex-start, center)
+    @include flex(flex-start, center);
+    list-style-type: none;
 }
 .footer__menu__item {
     margin-right: 25px;
@@ -30,9 +51,16 @@ footer {
     color: $white;
     & a {
         text-decoration: none;
-        transition: all .5s;
+        transition: all .6s;
+        color: $white;
         &:hover {
             cursor: pointer;
+            text-decoration: none;
         }
     }
+}
+.footer__social {
+  &__item {
+    display: inline-block;
+  }
 }

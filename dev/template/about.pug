@@ -2,22 +2,22 @@ extends ./template.pug
 
 block content
   section.section.hero
-    ul.socials
-      each item in ['vk', 'github', 'link']
-        li.socials__item
-          a(href="" class=`socials__link socials__link_${item}`)
-            +icon(`${item}`, 'beige_mod')
-    a(href="").hamburger
-      +icon('hamburger', 'beige_mod')
-    a(href="").down-arrow
-        +icon('arrow_down','beige_mod')
-    .hero__title
-      img(src="img/mountains-bg.png", alt="").section-title
-      .user.hero__user-block
-        .user__photo
-          +webp('avatar', 'png')
-        .user__name Павел Зотов
-        .user__desc Веб-разработчик из Александрова
+        ul.socials
+          each item in ['vk', 'github', 'link']
+            li.socials__item
+              a(href="" class=`socials__link socials__link_${item}`)
+                +icon(`${item}`, 'white_mod')
+        a(href="").hamburger
+          +icon('hamburger', 'beige_mod')
+        a(href="").down-arrow
+            +icon('arrow_down','beige_mod')
+        .hero__title
+          img(src="img/mountains-bg.png", alt="").section-title
+          .user.hero__user-block
+            .user__photo
+              +webp('avatar', 'png')
+            .user__name Павел Зотов
+            .user__desc Веб-разработчик из Александрова
   section.section.about
     .about__left
       svg(

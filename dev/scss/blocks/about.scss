@@ -1,3 +1,5 @@
+@import '../common/variables';
+@import '../common/mixins';
 .about {
   @extend %clearfix;
 }
@@ -66,6 +68,7 @@
 .about-data {
   width: 558px;
   height: auto;
+  padding-left: 30px;
   @include flex(center, center);
 }
 .about-data__description {

@@ -23,7 +23,7 @@ module.exports = function() {
             sprite: '../sprite.svg',
             render: {
               scss: {
-                dest: './scss/_sprite.scss',
+                dest: './dev/_sprite.scss',
                 template: './dev/scss/layout/_sprite_template.scss'
               }
             }
@@ -33,6 +33,6 @@ module.exports = function() {
       .on('error', function(error) {
         console.log(error);
       })
-      .pipe($.gulp.dest($.config.build + '/images/sprite'));
+      .pipe($.gulp.dest($.config.root + '/img'));
   });
 };
