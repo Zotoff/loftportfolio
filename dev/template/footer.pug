@@ -1,21 +1,20 @@
 footer
-    .container
-        .footer__top
-            .footer__top__left
-                nav.footer__menu
-                    each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
-                        li.footer__menu__item
-                            a(href="")= item
-            .footer__top__right
-                ul.footer__social
-                    each item in ['vk', 'github', 'link']
-                        li.footer__social__item
-                            a(href="")
-                                +icon(`${item}`, 'mod_white')
-        .footer__bottom
-            .footer__bottom__left
-                .footer__bottom__text
-                    p   Я - веб-разработчик со стажем. И этот сайт сделал из любви к творчеству
-            .footer__bottom__right
-                .footer__bottom__text
-                    | &copy; Павел Зотов
+    .footer__top
+        .footer__top__left
+            nav.footer__menu
+                each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+                    li.footer__menu__item
+                        a(href="")= item
+        .footer__top__right
+             ul.footer__social
+                each item in ['vk_round', 'github_round', 'in_round']
+                    li.footer__social__item
+                        a(href="")
+                            +icon(`${item}`, 'mod_white')
+    .footer__bottom
+        .footer__bottom__left
+            .footer__bottom__text
+                p   Я - веб-разработчик со стажем. И этот сайт сделал из любви к творчеству
+        .footer__bottom__right
+            .footer__bottom__text
+                | &copy; Павел Зотов

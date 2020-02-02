@@ -12,12 +12,24 @@
     font-size: 28px;
     line-height: 32px;
     margin-bottom: 20px;
+    @include phone_small() {
+        text-align: center;
+    }
+    @include laptop(){
+        text-align: left;
+    }
 }
 .skill-section__list {
     width: 100%;
     height: auto;
     margin-bottom: 40px;
     @include flex(space-between, center)
+    @include phone_small() {
+        @include flex(center, center);
+    }
+    @include laptop() {
+        @include flex(space-between, center);
+    }
 }
 .skill-section__item {
     width: 130px;

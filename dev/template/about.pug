@@ -2,29 +2,42 @@ extends ./template.pug
 
 block content
   section.section.hero
-        ul.socials
-          each item in ['vk', 'github', 'link']
-            li.socials__item
-              a(href="" class=`socials__link socials__link_${item}`)
-                +icon(`${item}`, 'white_mod')
-        a(href="").hamburger
-          +icon('hamburger', 'beige_mod')
-        a(href="").down-arrow
-            +icon('arrow_down','beige_mod')
-        .hero__title
-          img(src="img/mountains-bg.png", alt="").section-title
-          .user.hero__user-block
-            .user__photo
-              +webp('avatar', 'png')
-            .user__name Павел Зотов
-            .user__desc Веб-разработчик из Александрова
-  section.section.about
-    .about__left
+    .hero__bg
+      img(src="img/mountains-bg.png", alt="").hero__bg-img
+    ul.socials
+      each item in ['vk', 'github', 'in']
+        li.socials__item
+          a(href="" class=`socials__link socials__link_${item}`)
+            +icon(`${item}`, 'white_mod')
+    a(href="").hamburger
+      +icon('hamburger', 'beige_mod')
+    a(href="").down-arrow
+        +icon('arrow_down','beige_mod')
+    .hero__title
+      .user.hero__user-block
+        .user__photo
+          +webp('avatar', 'png')
+        .user__name Павел Зотов
+        .user__desc Веб-разработчик из Александрова
+  section.triangles
+    .triangles__left
       svg(
+          width="49%"
           viewbox="0 0 1000 100"
           preserveAspectRatio = "none"
-          class="triangle triangle_fill_white about__triangles")
+          fill="red"
+          class="triangle about__triangles")
             polygon(points="0,0 0,100 1000,100")
+    .triangles__right
+       svg(
+          width="49%"
+          viewbox="0 0 1000 100"
+          preserveAspectRatio = "none"
+          fill="red"
+          class="triangle about__triangles")
+            polygon(points="0,100 1000,100 1000,0")
+  section.section.about
+    .about__left
       .about__content
         .title.about__section-title
           h2.about__section-title_heading Обо мне
@@ -38,11 +51,6 @@ block content
             p Я веб разработчик из Александрова. Мне 33 года и я люблю фронт-энд. Мне нравится делать классные проекты. А еще я работаю инженером на заводе.
             p Этот сайт я сделал с любовью к LoftSchool.
     .about__right
-      svg(
-          viewbox="0 0 1000 100"
-          preserveAspectRatio = "none"
-          class="triangle triangle_fill_beige about__triangles")
-            polygon(points="0,100 1000,100 1000,0")
       .about-data
         .about-data__description.about-user-info
           .about-user-info__title

@@ -1,0 +1,36 @@
+.icon-vk,
+.icon-github,
+.icon-link,
+.icon-in{
+    width: 29px;
+    height: 24px;
+    fill: rgba(255, 255, 255, .6);
+    transition: all .5s ease-in;
+    &:hover {
+        fill: $white;
+    }
+}
+
+.icon-hamburger {
+    width: 42px;
+    height: 38px;
+    fill: rgba(255, 255, 255, .6);
+    transition: all .5s ease-in;
+    &:hover {
+        cursor: pointer;
+        fill: $white;
+    }
+}
+
+.icon-vk_round,
+.icon-github_round,
+.icon-in_round {
+    width: 36px;
+    height: 36px;
+    fill: rgba(255, 255, 255, .6);
+    transition: all .5s ease-in;
+    &:hover {
+        cursor: pointer;
+        fill: $white;
+    }
+}

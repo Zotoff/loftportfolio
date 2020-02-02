@@ -8,6 +8,12 @@
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
+    @include phone_small() {
+      font-size: 21px;
+    }
+    @include tablet() {
+      font-size: 34px;
+    }
   
     $margin : 40px;
   

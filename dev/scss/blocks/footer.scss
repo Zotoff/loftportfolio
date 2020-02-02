@@ -4,6 +4,8 @@ footer {
     background-color: rgba(0, 0, 0, .6);
     padding-top: 30px;
     padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
     @include flex(center, center);
 
     position: absolute;
@@ -11,6 +13,16 @@ footer {
     & .container {
         max-width: 1200px;
         @include flex(center, center)
+    }
+    @include phone_small(){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @include tablet() {
+        padding-top: 30px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
 .footer__top,
@@ -20,6 +32,15 @@ footer {
 }
 .footer__top {
   border-bottom: 1px solid rgba(255, 255, 255, .8);
+  @include tablet(){
+      justify-content: center;
+  }
+  @include laptop(){
+    justify-content: space-between;
+}
+  @include desktop(){
+      justify-content: space-between;
+  }
 }
 .footer__bottom {
   margin-top: 15px;
@@ -30,15 +51,130 @@ footer {
     line-height: 24px;
     color: #ffffff;
     opacity: 0.6;
+    @include phone_small(){
+        text-align: center;
+    }
+
+    @include tablet(){
+        width: 80%;
+        @include flex(center, center);
+        text-align: left;
+    }
+    @include laptop(){
+        width: 100%;
+    }
 }
 .footer__bottom__text p {
     color: #ffffff;
     opacity: 0.6;
 }
-.footer__top__left,
-.footer__top__right {
+
+.footer__bottom__left {
+    @include phone_small(){
+        width: 100%;
+        margin-bottom: 20px;
+        @include flex(center, center);
+    }
+    @include phone_large(){
+        width: 100%;
+        margin-bottom: 20px;
+        @include flex(center, center);
+    }
+    @include tablet(){
+        width: 100%;
+        margin-bottom: 20px;
+        @include flex(center, center);
+    }
+    @include laptop(){
+        width: 49%;
+        justify-content: flex-end;
+    }
+    @include desktop(){
+        width: 49%;
+        justify-content: flex-end;
+    }
+}
+
+.footer__bottom__right {
+    @include phone_small(){
+        width: 100%;
+        margin-bottom: 20px;
+        @include flex(center, center);
+    }
+    @include phone_large(){
+        width: 100%;
+        margin-bottom: 20px;
+        @include flex(center, center);
+    }
+    @include tablet(){
+        width: 100%;
+        justify-content: center;
+        @include flex(center, center);
+    }
+    @include laptop(){
+        width: 49%;
+        justify-content: flex-end;
+    }
+    @include desktop(){
+        width: 49%;
+        justify-content: flex-end;
+    }
+}
+
+
+.footer__top__left {
     width: 49%;
     @include flex(flex-start, center);
+    @include phone_small(){
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    @include phone_large(){
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    @include tablet(){
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    @include laptop(){
+        width: 49%;
+        justify-content: flex-start;
+    }
+    @include desktop(){
+        width: 49%;
+        justify-content: flex-start;
+    }
+}
+.footer__top__right {
+    width: 49%;
+    @include flex(flex-end, center);
+    @include phone_small(){
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    @include phone_large(){
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    @include tablet(){
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    @include laptop(){
+        width: 49%;
+        justify-content: flex-end;
+    }
+    @include desktop(){
+        width: 49%;
+        justify-content: flex-end;
+    }
 }
 .footer__menu {
     @include flex(flex-start, center);
@@ -49,6 +185,14 @@ footer {
     @include roboto-medium;
     font-size: 15px;
     color: $white;
+    @include phone_small(){
+        font-size: 13px;
+        margin-right: 20px;
+    }
+    @include tablet(){
+        font-size: 15px;
+        margin-right: 25px;
+    }
     & a {
         text-decoration: none;
         transition: all .6s;
@@ -62,5 +206,9 @@ footer {
 .footer__social {
   &__item {
     display: inline-block;
+    margin-right: 10px;
+    &:last-child {
+        margin-right: 0px;
+    }
   }
 }

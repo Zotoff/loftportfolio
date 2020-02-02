@@ -21,6 +21,10 @@ module.exports = function() {
                 'Opera 12.1'
             ]
         }))
+        .pipe($.cssunit({
+            type: 'px-to-rem',
+            rootSize: 16
+        }))
         .pipe($.gp.sourcemaps.write())
         .pipe($.gp.rename({
             suffix: '.min'

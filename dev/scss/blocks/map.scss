@@ -8,6 +8,18 @@
         object-fit: cover;
     }
     position: relative;
+    @include phone_small() {
+        min-height: 850px;
+        height: 825px;
+    }
+
+    @include tablet() {
+        min-height: 850px;
+        height: 850px;
+    }
+    @include desktop() {
+        height: auto;
+    }
 }
 .map__contacts {
     position: absolute;
@@ -19,6 +31,24 @@
     background: rgba(255, 255, 255, .8);
     border-radius: 5px;
     @include flex(center, center);
+    @include phone_small(){
+        top: 0px;
+        background: #ffffff;
+    }
+    @include tablet(){
+        top: 180px;
+    }
+    @include desktop(){
+        top: 35%;
+    }
+    & h2.subtitle {
+        @include phone_small(){
+            font-size: 35px;
+        }
+        @include tablet() {
+            font-size: 35px;
+        }
+    }
 }
 .map__contacts__wrapper {
     width: 310px;
@@ -34,6 +64,9 @@
         &::after {
             top: 50%;
         }
+    }
+    @include phone_small(){
+        @include flex(center, center)
     }
 }
 .map__contacts__item {

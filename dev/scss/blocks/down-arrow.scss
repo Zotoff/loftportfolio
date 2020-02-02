@@ -3,3 +3,8 @@
   z-index: 1000;
   @include centered(x);
 }
+.icon-arrow_down {
+  width: 28px;
+  height: 17px;
+  fill: $beige
+}

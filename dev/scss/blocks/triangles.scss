@@ -1,0 +1,31 @@
+.triangles{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 85px;
+    width: 100%;
+
+    position: relative;
+
+    @include tablet(){
+
+    }
+    @include desktop(){
+        display: block;
+        width: 100%;
+        @include flex(space-between, center);
+        position: relative;
+    }
+}
+.triangles__left,
+.triangles__right {
+    width: 50%;
+    height: 85px;
+    position: relative;
+    top: -85px;
+}
+// .triangles__left {
+//     & .about__triangles {
+//         fill: $white;
+//     }
+// }

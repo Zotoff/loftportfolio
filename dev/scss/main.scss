@@ -3,7 +3,8 @@
 @import 'common/_mixins';
 @import 'common/_variables';
 @import 'common/_base';
-@import 'sprite/symbol/scss/sprite';
+@import 'common/_icons';
+//@import 'sprite/symbol/scss/sprite';
 
 @import 'blocks/down-arrow.scss';
 @import 'blocks/hero.scss';
@@ -16,4 +17,5 @@
 @import 'blocks/skills.scss';
 @import 'blocks/user.scss';
 @import 'blocks/about.scss';
+@import 'blocks/triangles.scss';
 @import 'blocks/footer.scss';
