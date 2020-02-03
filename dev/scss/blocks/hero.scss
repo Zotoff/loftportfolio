@@ -16,8 +16,10 @@
 }
 
 .hero__user-block {
+  width: 380px;
   @include centered();
   position: relative;
+  @include flex(center, center);
   &::before {
     content: "";
     position: absolute;
