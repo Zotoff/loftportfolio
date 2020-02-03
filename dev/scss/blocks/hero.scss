@@ -13,6 +13,18 @@
   text-align: center;
   width: 100%;
   height: auto;
+  @include phone_small(){
+    top: 50%;
+  }
+  @include phone_large(){
+    top: 50%;
+  }
+  @include tablet(){
+    top: 50%;
+  }
+  @include laptop(){
+    top: 70%;
+  }
 }
 
 .hero__user-block {
@@ -27,6 +39,15 @@
     width: 100%;
     height: auto;
     background-size: contain;
+  }
+  @include phone_small(){
+    width: 250px;
+  }
+  @include tablet(){
+    width: 250px;
+  }
+  @include laptop(){
+    width: 380px;
   }
 }
 

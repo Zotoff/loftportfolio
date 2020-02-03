@@ -9,21 +9,106 @@
 }
 .hero_blog {
     height: 395px;
+    @include phone_small(){
+        height: 560px;
+    }
+    @include phone_large(){
+        height: 560px;
+    }
+    @include tablet(){
+        height: 505px;
+    }
+    @include laptop(){
+        height: 395px;
+    }
 }
 .blog__title {
     top: 86%;
+    @include phone_small(){
+        top: 70%;
+      }
+      @include phone_large(){
+        top: 70%;
+      }
+      @include tablet(){
+        top: 70%;
+      }
+      @include laptop(){
+          top: 86%;
+      }
+    & h1 {
+        @include phone_small(){
+            font-size: 49px;
+        }
+        @include phone_large(){
+            font-size: 49px;
+        }
+        @include tablet(){
+            font-size: 49px;
+        }
+        @include laptop(){
+            font-size: 63px;
+        }
+    }
 }
 .triangle_blog {
     fill: #ffffff !important;
     position: absolute;
     bottom: 0px;
 }
+
+.down-arrow_blog {
+    @include phone_small(){
+        display: block;
+    }
+    @include phone_large(){
+        display: block;
+    }
+    @include tablet(){
+        display: block;
+    }
+    @include laptop(){
+        display: none;
+    }
+}
+
 .blog__left {
     width: 300px;
+    @include phone_small(){
+        display: none;
+    }
+    @include phone_large(){
+        display: none;
+    }
+    @include tablet(){
+        display: none;
+    }
+    @include laptop(){
+        display: block;
+    }
 }
 .blog__right {
     width: 66%;
     height: auto;
+    @include phone_small(){
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include phone_large(){
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include tablet(){
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include laptop(){
+        width: 66%;
+        height: auto;
+    }
 }
 .blog__title {
     h1 {
