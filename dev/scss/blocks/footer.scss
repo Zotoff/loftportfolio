@@ -93,6 +93,9 @@ footer {
         width: 49%;
         justify-content: flex-end;
     }
+    & .footer__bottom__text {
+        @include flex(flex-start, center);
+    }
 }
 
 .footer__bottom__right {
@@ -113,11 +116,15 @@ footer {
     }
     @include laptop(){
         width: 49%;
-        justify-content: flex-end;
+        @include flex(flex-end, center);
     }
     @include desktop(){
         width: 49%;
-        justify-content: flex-end;
+        @include flex(flex-end, center);
+    }
+    & .footer__bottom__text {
+        width: 300px;
+        @include flex(flex-end, center);
     }
 }
 

@@ -1,0 +1,37 @@
+.blog-sidebar {
+    width: 300px;
+    height: auto;
+}
+.blog-sidebar__list {
+    list-style: none;
+}
+.blog-sidebar__list__item {
+    height: auto;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    transition: all .5s ease-in;
+    @include flex(flex-end, center);
+    & a {
+        @include roboto-regular;
+        font-size: 16px;
+        line-height: 26px;
+        color: $main-font-color;
+        transition: all .5s ease-in;
+        text-decoration: none;
+        text-align: right;
+    }
+    &:hover {
+        border-right: 2px solid $green;
+        & a {
+            color: $green;
+        }
+    }
+}
+.blog-sidebar__list__item_active {
+    border-right: 2px solid $green;
+    & a {
+        color: $green;
+    }
+}

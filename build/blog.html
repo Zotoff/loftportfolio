@@ -21,7 +21,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <section class="section hero">
+      <section class="section hero hero_blog">
         <div class="hero__bg"><img class="hero__bg-img" src="img/mountains-bg.png" alt=""></div>
         <ul class="socials">
           <li class="socials__item"><a class="socials__link socials__link_vk" href="">
@@ -39,11 +39,8 @@
         </ul><a class="hamburger" href="">
           <svg class="icon icon-hamburger beige_mod">
             <use xlink:href="img/sprite.svg#hamburger"></use>
-          </svg></a><a class="down-arrow" href="">
-          <svg class="icon icon-arrow_down beige_mod">
-            <use xlink:href="img/sprite.svg#arrow_down"></use>
           </svg></a>
-        <div class="hero__title">
+        <div class="hero__title blog__title">
           <div class="user hero__user-block">
             <div class="user__photo">
               <picture>
@@ -60,14 +57,45 @@
       </section>
       <section class="triangles">
         <div class="triangles__left">
-          <svg class="triangle about__triangles" width="49%" viewbox="0 0 1000 100" preserveAspectRatio="none" fill="red">
+          <svg class="triangle triangle_blog" width="49%" viewbox="0 0 1000 100" preserveAspectRatio="none" fill="red">
             <polygon points="0,0 0,100 1000,100"></polygon>
           </svg>
         </div>
         <div class="triangles__right">
-          <svg class="triangle about__triangles" width="49%" viewbox="0 0 1000 100" preserveAspectRatio="none" fill="red">
+          <svg class="triangle triangle_blog" width="49%" viewbox="0 0 1000 100" preserveAspectRatio="none" fill="red">
             <polygon points="0,100 1000,100 1000,0"></polygon>
           </svg>
+        </div>
+      </section>
+      <section class="blog">
+        <div class="container">
+          <div class="blog__left">
+            <sidebar class="blog-sidebar">
+              <ul class="blog-sidebar__list">
+                <li class="blog-sidebar__list__item blog-sidebar__list__item_active"><a href="#">Самое важное в SASS</a></li>
+                <li class="blog-sidebar__list__item"><a href="#">Приемы в верстке, без которых необходится ни один сайт</a></li>
+                <li class="blog-sidebar__list__item"><a href="#">Самый необходимый набор плагинов</a></li>
+                <li class="blog-sidebar__list__item"><a href="#">Почему я выбрал PUG</a></li>
+              </ul>
+            </sidebar>
+          </div>
+          <div class="blog__right">
+            <div class="blog__articles">
+              <article class="blog__article">
+                <h2 class="blog__article__heading">Самое важное в SASS</h2>
+                <p class="blog__article__date">22 ноября 2016</p>
+                <p class="blog__article__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
+                <p class="blog__article__text">Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+                <div class="blog__article__code"><img src="img/block-code.png" alt=""></div>
+              </article>
+              <article class="blog__article">
+                <h2 class="blog__article__heading">Приёмы в вёрстке, без которых не обходится ни один сайт</h2>
+                <p class="blog__article__date">13 ноября 2016</p>
+                <p class="blog__article__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
+                <p class="blog__article__text">Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
     </div>
