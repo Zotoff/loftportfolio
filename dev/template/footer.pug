@@ -1,3 +1,4 @@
+include ./mixins.pug
 footer
     .footer__top
         .footer__top__left
@@ -9,8 +10,8 @@ footer
              ul.footer__social
                 each item in ['vk_round', 'github_round', 'in_round']
                     li.footer__social__item
-                        a(href="")
-                            +icon(`${item}`, 'mod_white')
+                        a(href="" class=`socials__link socials__link_${item}`)
+                            +icon(`${item}`, 'white_mod')
     .footer__bottom
         .footer__bottom__left
             .footer__bottom__text

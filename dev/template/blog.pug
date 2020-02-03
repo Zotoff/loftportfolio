@@ -1,0 +1,39 @@
+extends ./template.pug
+block title
+  title Blog
+block content
+  section.section.hero
+    .hero__bg
+      img(src="img/mountains-bg.png", alt="").hero__bg-img
+    ul.socials
+      each item in ['vk', 'github', 'in']
+        li.socials__item
+          a(href="" class=`socials__link socials__link_${item}`)
+            +icon(`${item}`, 'white_mod')
+    a(href="").hamburger
+      +icon('hamburger', 'beige_mod')
+    a(href="").down-arrow
+        +icon('arrow_down','beige_mod')
+    .hero__title
+      .user.hero__user-block
+        .user__photo
+          +webp('avatar', 'png')
+        h1.about__section-title_heading.blog__title Блог
+        .user__desc Статьи, которые я написал
+  section.triangles
+    .triangles__left
+      svg(
+          width="49%"
+          viewbox="0 0 1000 100"
+          preserveAspectRatio = "none"
+          fill="red"
+          class="triangle about__triangles")
+            polygon(points="0,0 0,100 1000,100")
+    .triangles__right
+       svg(
+          width="49%"
+          viewbox="0 0 1000 100"
+          preserveAspectRatio = "none"
+          fill="red"
+          class="triangle about__triangles")
+            polygon(points="0,100 1000,100 1000,0")

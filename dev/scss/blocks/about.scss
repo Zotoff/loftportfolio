@@ -117,6 +117,12 @@
     @include tablet() {
       font-size: 35px;
     }
+    @include laptop(){
+      font-size: 63px;
+    }
+    @include desktop(){
+      font-size: 63px;
+    }
 }
 .user-about {
   width: 100%;
