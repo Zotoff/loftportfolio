@@ -31,5 +31,16 @@
     @include tablet(){
         top: 25px;
         right: 30px;
+        left: initial;
+    }
+    @include laptop(){
+        top: 25px;
+        right: 30px;
+        left: initial;
+    }
+    @include desktop(){
+        top: 25px;
+        right: 30px;
+        left: initial;
     }
 }

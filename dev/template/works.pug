@@ -1,0 +1,95 @@
+extends ./template.pug
+block title
+  title Мои работы
+block content
+  section.section.hero
+    .hero__bg
+      img(src="img/mountains-bg.png", alt="").hero__bg-img
+    ul.socials
+      each item in ['vk', 'github', 'in']
+        li.socials__item
+          a(href="" class=`socials__link socials__link_${item}`)
+            +icon(`${item}`, 'white_mod')
+    a(href="").hamburger
+      +icon('hamburger', 'beige_mod')
+    a(href="").down-arrow
+        +icon('arrow_down','beige_mod')
+    .hero__title
+      .user.hero__user-block
+        .user__photo
+          +webp('avatar', 'png')
+        .user__name Павел Зотов
+        .user__desc Веб-разработчик из Александрова
+  section.triangles
+    .triangles__left
+      svg(
+          width="49%"
+          viewbox="0 0 1000 100"
+          preserveAspectRatio = "none"
+          fill="red"
+          class="triangle about__triangles")
+            polygon(points="0,0 0,100 1000,100")
+    .triangles__right
+       svg(
+          width="49%"
+          viewbox="0 0 1000 100"
+          preserveAspectRatio = "none"
+          fill="red"
+          class="triangle about__triangles")
+            polygon(points="0,100 1000,100 1000,0")
+  section.section.works
+    .container
+      .works__heading
+        h1 Мои работы
+  section.works__slider
+    .works__slider__left
+      .works__slider__left__wrapper
+        .works__slider__subheading
+          h2 Сайт школы онлайн-образования
+        .works__slider__tags
+          p HTML, CSS, Javascript
+        .works__slider__link
+          a(href="").btn
+            +icon('link', 'white_mod')
+            | Посмотреть сайт
+    .works__slider__right
+      .works__slides
+          img(src="img/works-slides.png", alt="")
+      .works__slider__controls
+        .works__slider__controls__left
+          img(src="img/works-mockup-1.png", alt="")
+          a(href="")
+            +icon('portf_arrow_down', 'mod__white')
+        .works__slider__controls__right
+          img(src="img/works-mockup-1.png", alt="")
+          a(href="")
+            +icon('portf_arrow_up', 'mod__white')
+  section.works__reviews
+    .works__heading
+      h2 Что обо мне говорят
+    .works__reviews
+      .reviews__slider
+        .reviews__slide
+          p.reviews__slide__text
+          .reviews__slide__contact
+            img(src="", alt="")
+            p.reviews__slide__text.text_bold Ковальчук Дмитрий
+            p.reviews__slide__text.text_normal основатель Loftschool
+        .reviews__slide
+            p.reviews__slide__text
+            .reviews__slide__contact
+              img(src="", alt="")
+              p.reviews__slide__text.text_bold Ковальчук Дмитрий
+              p.reviews__slide__text.text_normal основатель Loftschool
+      .reviews__form
+        form(action="" method="")
+          h3.reviews__form__heading Связаться со мной
+          .form-group
+            input(type="text" name="text" placeholder="Имя")
+          .form-group
+            input(type="email" name="email" placeholder="Email")
+          .form-group
+            textarea(name="", cols="30", rows="10", placeholder="Ваше сообщение")
+          .form-group.form-group_between
+            button(type="submit")#reviews__submit
+            button(type="submit")#reviews__clear
