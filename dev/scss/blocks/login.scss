@@ -1,0 +1,223 @@
+.login {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/mountains-bg.png') no-repeat center;
+    background-size: cover;
+    @include flex(center, center);
+}
+.login .container {
+    width: 400px;
+    height: auto;
+    @include flex(center, center);
+}
+.login__form {
+    width: 380px;
+    height: 414px;
+    background-color: rgba(255, 225, 255, .8);
+    border-radius: 5px;
+    & form {
+        & .form-group {
+            margin-bottom: 22px;
+        }
+    }
+}
+.login__form__heading {
+    @include bernier-regular;
+    font-size: 35px;
+    line-height: 41px;
+    position: relative;
+    text-align: center;
+    width: 195px;
+    margin: 40px auto;
+    color: $main-font-color;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 15px;
+        height: 5px;
+        background-color: #d0d2d2;
+        top: 18px;
+        left: -22px;
+        position: absolute;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 15px;
+        height: 5px;
+        background-color: #d0d2d2;
+        top: 18px;
+        right: -22px;
+        position: absolute;
+    }
+}
+.login__form__icon {
+    position: relative;
+    &::before {
+        content: "";
+        display: block;
+        width: 45px;
+        height: 45px;
+        z-index: 1000;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+
+        @include flex(center, center);
+
+        position: absolute;
+        top: 0px;
+        left: 20px;
+
+    }
+}
+
+.icon_user {
+    &::before {
+        background: #f0efe9 url('../img/icon-user.svg') no-repeat center;
+    }
+}
+.icon_key {
+    &::before {
+        background: #f0efe9 url('../img/icon-key.svg') no-repeat center;
+    }
+}
+
+.login__form__input {
+    width: 300px;
+    height: 45px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    position: relative;
+
+    padding-left: 25px;
+    margin-left: 60px;
+}
+.login__form__input::placeholder {
+    @include roboto-regular;
+    font-size: 16px;
+    line-height: 1.2em;
+    color: $main-font-color;
+}
+
+.form-group__double_center {
+    @include flex(center, center);
+    position: relative;
+    margin-bottom: 20px;
+    & p {
+        @include roboto-regular;
+        font-size: 16px;
+        line-height: 24px;
+        color: $main-font-color;
+    }
+}
+.form-group__double_between {
+    @include flex(space-between, center);
+    position: relative;
+}
+.login__form__checkbox {
+    width: 18px;
+    height: 18px;
+    background-color: $green;
+    color: #ffffff;
+    position: absolute;
+    left: 132px;
+    top: 0px;
+}
+.login__form__checkbox__label  {
+    position: relative;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    background: url('../img/checkbox_checked.png') no-repeat center;
+}
+.text_centered {
+    text-align: center;
+}
+.form-group p {
+    @include roboto-regular;
+    font-size: 14px;
+    line-height: 24px;
+    color: $main-font-color;
+    font-weight: bold;
+}
+
+.form-group__double__left,
+.form-group__double__right {
+    width: 49%;
+}
+.form-group__double__left {
+    @include flex(flex-end, center);
+    padding-right: 50px;
+    position: relative;
+}
+.form-group__double__right {
+    @include flex(flex-start, center);
+    position: relative;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.login__form__radio {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 0px;
+
+}
+.login__form__radio_left {
+    left: 81px;
+}
+.login__form__radio_right {
+    left: -3px;
+}
+.login__form__radio__label {
+    width: 20px;
+    height: 20px;
+    background: url('../img/radio_unchecked.png') no-repeat center;
+    position: relative;
+    margin-right: 12px;
+}
+.form-group__double__left p,
+.form-group__double__right p {
+    color: $main-font-color;
+    font-weight: 400;
+    transition: all .5s;
+    &:hover {
+        color: $green;
+    }
+}
+
+.form-group__buttons__left,
+.form-group__buttons__right {
+    width: 50%;
+}
+.form-group__buttons__left {
+    border-right: 1px solid #74cac3;
+}
+.form-group__buttons__right {
+    border-left: 1px solid #74cac3;
+}
+.login__form__button {
+    width: 100%;
+    height: 45px;
+    background-color: rgba(8, 176,158, .7);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    transition: all .5s;
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(10, 142, 134, .7);
+    }
+}
+
+.login__footer {
+    background: transparent;
+}
+.login__footer__text p {
+    color: rgba(255, 255, 255, .8);
+}
