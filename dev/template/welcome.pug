@@ -21,21 +21,22 @@ html(lang="ru")
     body
       .wrapper
         section.welcome
-            .container
-                .welcome__block
-                    .welcome__block__image
-                        img(src="../img/avatar.png", alt="")
-                    .welcome__block__info
-                        h1.welcome__heading Павел Зотов
-                        p.welcome__text Личный сайт веб-разработчика
-                    .welcome__block__links
-                        each item in ['vk', 'github', 'in']
-                            a(href="" class=`socials__link socials__link_${item}`)
-                                +icon(`${item}`, 'green_mod')
-                    .welcome__block__buttons
-                        a.welcome__button(href="/works.html") Мои работы
-                        a.welcome__button(href="/about.html") Обо мне
-                        a.welcome__button(href="/blog.html") Блог
+          a.authorize__btn(href="") Авторизоваться
+          .container
+              .welcome__block
+                  .welcome__block__image
+                      img(src="../img/avatar.png", alt="")
+                  .welcome__block__info
+                      h1.welcome__heading Павел Зотов
+                      p.welcome__text Личный сайт веб-разработчика
+                  .welcome__block__links
+                      each item in ['vk', 'github', 'in']
+                          a(href="" class=`socials__link socials__link_${item}`)
+                              +icon(`${item}`, 'green_mod')
+                  .welcome__block__buttons
+                      a.welcome__button(href="/works.html") Мои работы
+                      a.welcome__button(href="/about.html") Обо мне
+                      a.welcome__button(href="/blog.html") Блог
 
         footer.login__footer
             .login__footer__text

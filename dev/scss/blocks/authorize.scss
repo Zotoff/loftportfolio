@@ -1,0 +1,35 @@
+.authorize__btn {
+    width: 180px;
+    height: 45px;
+    line-height: 45px;
+
+    @include roboto-medium;
+    font-size: 16px;
+    line-height: 45px;
+
+    color: $white !important;
+    text-decoration: none !important;
+    text-align: center;
+
+    border: 1px solid $white;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 25px;
+    right: 30px;
+
+    @include phone_small(){
+        top: 10px;
+        left: 50%;
+        margin-left: -25%;
+    }
+    @include phone_large(){
+        top: 10px;
+        left: 50%;
+        margin-left: -25%;
+    }
+    @include tablet(){
+        top: 25px;
+        right: 30px;
+    }
+}
