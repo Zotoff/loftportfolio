@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style/main.min.css">
+    <title>Логин</title>
+    <style>
+      .user-about__text p {
+        margin-bottom: 25px;
+      }
+      .user-about__text ul {
+        list-style: none;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="login">
+        <div class="container">
+          <div class="login__form">
+            <form action="">
+              <h2 class="about__section-title_heading login__form__heading">Авторизуйтесь</h2>
+              <div class="form-group login__form__icon icon_user">
+                <input class="login__form__input" type="text" placeholder="Логин">
+              </div>
+              <div class="form-group login__form__icon icon_key">
+                <input class="login__form__input" type="password" placeholder="Пароль">
+              </div>
+              <div class="form-group__double_center">
+                <label class="login__form__checkbox__label" for="checkbox">
+                  <input class="login__form__checkbox" type="checkbox" name="checkbox" checked="checked">
+                </label>
+                <p>Я не робот</p>
+              </div>
+              <div class="form-group">
+                <p class="text_centered mb10">Вы точно не робот?</p>
+                <div class="form-group__double_center">
+                  <div class="form-group__double__left">
+                    <label class="login__form__radio__label" for="radio">
+                      <input class="login__form__radio login__form__radio_left" type="radio" checked="checked">
+                    </label>
+                    <p>Да</p>
+                  </div>
+                  <div class="form-group__double__right">
+                    <label class="login__form__radio__label" for="radio">
+                      <input class="login__form__radio login__form__radio_right" type="radio" checked="checked">
+                    </label>
+                    <p>Не уверен</p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group__double_between">
+                <div class="form-group__buttons__left">
+                  <button class="login__form__button" type="submit" id="login__form__button-main">На главную</button>
+                </div>
+                <div class="form-group__buttons__right">
+                  <button class="login__form__button" type="submit" id="login__form__button-submit">Войти</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer class="login__footer">
+        <div class="login__footer__text">
+          <p>&copy; Павел Зотов | Создано с любовью</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
