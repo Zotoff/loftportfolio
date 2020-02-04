@@ -20,6 +20,18 @@
             margin-bottom: 22px;
         }
     }
+    @include phone_small(){
+        width: 95%;
+    }
+    @include phone_large(){
+        width: 95%;
+    }
+    @include tablet(){
+        width: 350px;
+    }
+    @include laptop(){
+        width: 380px;
+    }
 }
 .login__form__heading {
     @include bernier-regular;
@@ -30,6 +42,21 @@
     width: 195px;
     margin: 40px auto;
     color: $main-font-color;
+
+    @include phone_small(){
+        font-size: 30px;
+    }
+
+    @include phone_large(){
+        font-size: 30px;
+    }
+
+    @include tablet(){
+        font-size: 30px;
+    }
+    @include laptop(){
+        font-size: 35px;
+    }
 
     &::before {
         content: "";
@@ -94,6 +121,20 @@
 
     padding-left: 25px;
     margin-left: 60px;
+
+    @include phone_small(){
+        width: 75%;
+    }
+    @include phone_large(){
+        width: 75%;
+    }
+
+    @include tablet(){
+        width: 78%;
+    }
+    @include laptop(){
+        width: 300px;
+    }
 }
 .login__form__input::placeholder {
     @include roboto-regular;
@@ -105,7 +146,7 @@
 .form-group__double_center {
     @include flex(center, center);
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     & p {
         @include roboto-regular;
         font-size: 16px;
@@ -123,8 +164,9 @@
     background-color: $green;
     color: #ffffff;
     position: absolute;
-    left: 132px;
+    left: 0px;
     top: 0px;
+    z-index: -1;
 }
 .login__form__checkbox__label  {
     position: relative;
@@ -157,8 +199,8 @@
     @include flex(flex-start, center);
     position: relative;
 }
-.mb20 {
-    margin-bottom: 20px;
+.mb10 {
+    margin-bottom: 10px;
 }
 
 .login__form__radio {
@@ -169,10 +211,12 @@
 
 }
 .login__form__radio_left {
-    left: 81px;
+    left: 0px;
+    z-index: -1;
 }
 .login__form__radio_right {
-    left: -3px;
+    left: 0px;
+    z-index: -1;
 }
 .login__form__radio__label {
     width: 20px;
