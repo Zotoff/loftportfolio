@@ -1,5 +1,9 @@
 .works {
     height: auto;
+    margin-top: -40px;
+}
+.work__triangles {
+    fill: $white !important;
 }
 .works__heading {
     height: 190px;
@@ -19,13 +23,15 @@
         left: 0px;
         top: -20px;
     }
-    & h1 {
+    & h1,
+    & h2 {
         @include bernier-regular;
         font-size: 63px;
         line-height: 56px;
-        color: $main-font-color;
+        color: $black-font-color;
         text-align: center;
         position: relative;
+        width: 287px;
 
         &::before,
         &::after {
@@ -39,13 +45,26 @@
         }
 
         &::before {
-            left: 0px;
+            left: -40px;
             top: 20px;
         }
         &::after {
-            right: 0px;
+            right: -40px;
             top: 20px;
         }
+    }
+}
+.works__heading_about {
+    &::before {
+        content: "";
+        background: url('../img/about_header.png') no-repeat center;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        left: 0px;
+        top: -20px;
     }
 }
 .works__slider {
@@ -90,11 +109,11 @@
         }
         &::before {
             top: 20px;
-            left: 0px;
+            left: -20px;
         }
         &::after {
             top: 20px;
-            right: 0px;
+            right: -20px;
         }
     }
 }
@@ -187,4 +206,193 @@
             }
         }
     }
+}
+.works__reviews {
+    width: 100%;
+    height: auto;
+    min-height: 1300px;
+    background: url('../img/works-bottom-bg.png') no-repeat center;
+    background-size: cover;
+    @include flex(center, flex-start);
+    & .container {
+        @include flex(center, flex-start);
+        padding-top: 75px;
+    }
+}
+.reviews__slider {
+    @include flex(space-between, center);
+    width: 100%;
+}
+.reviews__slide {
+    width: 380px;
+    height: 240px;
+    @include flex(flex-start, center);
+    position: relative;
+    & .icon {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 30px;
+    }
+}
+.reviews__slide__contact {
+    margin-top: 30px;
+    @include flex(flex-start, center);
+    & img {
+        margin-right: 20px;
+    }
+
+}
+.reviews__slide__text {
+    @include roboto-regular;
+    font-size: 16px;
+    line-height: 26px;
+    color: $main-font-color;
+}
+.text_bold {
+    font-weight: 700;
+}
+.text_normal {
+    font-weight: 400;
+}
+.text_green {
+    color: $green;
+}
+
+.reviews__form {
+    width: 420px;
+    height: 440px;
+    position: relative;
+    margin-top: 70px;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 10;
+        -webkit-filter: blur(1px);
+        filter: blur(1px);
+        background: rgba(255, 255, 255, .7);
+    }
+    
+    border-radius: 5px;
+    
+    & form {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1000;
+        & .form-group {
+            margin-bottom: 17px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+    }
+}
+.reviews__form__heading {
+    @include bernier-regular;
+    color: $main-font-color;
+    text-align: center;
+
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    font-size: 35px;
+    line-height: 1em;
+    
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        width: 22px;
+        height: 5px;
+        background-color: #455a64;
+
+        position: absolute;
+        top: 15px;
+    }
+    &::before {
+        left: 0px;
+    }
+    &::after {
+        right: 0px;
+    }
+}
+.reviews__form__input {
+    width: 340px;
+    height: 45px;
+    padding-left: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    @include roboto-regular;
+    font-size: 16px;
+    line-height: 1.2em;
+    color: $main-font-color;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.reviews__form__textarea {
+    width: 340px;
+    height: 140px;
+    padding-left: 16px;
+    padding-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    @include roboto-regular;
+    font-size: 16px;
+    line-height: 1.2em;
+    color: $main-font-color;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.form-group_between {
+    width: 100%;
+    height: auto;
+    @include flex(space-between, center);
+}
+.reviews__button {
+    width: 50%;
+    height: 45px;
+
+    @include roboto-regular;
+    color: $white;
+    font-size: 16px;
+    line-height: 1.2em;
+
+    background-color: $green;
+    transition: all .5s;
+    border: none;
+    outline: none;
+    &:hover {
+        color: rgba(38, 140, 140, .9);
+    }
+    &:nth-child(1) {
+        border-bottom-left-radius: 5px;
+        border-right: 1px solid #82cfc9;
+    }
+    &:nth-child(2) {
+        border-bottom-right-radius: 5px;
+        border-left: 1px solid #82cfc9;
+    }
+}
+.mb20 {
+    margin-bottom: 20px;
 }

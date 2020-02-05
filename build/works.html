@@ -58,12 +58,12 @@
       </section>
       <section class="triangles">
         <div class="triangles__left">
-          <svg class="triangle about__triangles" width="49%" viewbox="0 0 1000 100" preserveAspectRatio="none" fill="red">
+          <svg class="triangle about__triangles work__triangles" width="49%" viewbox="0 0 1000 100" preserveAspectRatio="none" fill="red">
             <polygon points="0,0 0,100 1000,100"></polygon>
           </svg>
         </div>
         <div class="triangles__right">
-          <svg class="triangle about__triangles" width="49%" viewbox="0 0 1000 100" preserveAspectRatio="none" fill="red">
+          <svg class="triangle about__triangles work__triangles" width="49%" viewbox="0 0 1000 100" preserveAspectRatio="none" fill="red">
             <polygon points="0,100 1000,100 1000,0"></polygon>
           </svg>
         </div>
@@ -105,23 +105,33 @@
         </div>
       </section>
       <section class="works__reviews">
-        <div class="works__heading">
-          <h2>Что обо мне говорят</h2>
-        </div>
-        <div class="works__reviews">
+        <div class="container">
+          <div class="works__heading works__heading_about">
+            <h2>Что обо мне говорят</h2>
+          </div>
           <div class="reviews__slider">
             <div class="reviews__slide">
-              <p class="reviews__slide__text"></p>
-              <div class="reviews__slide__contact"><img src="" alt="">
-                <p class="reviews__slide__text text_bold">Ковальчук Дмитрий</p>
-                <p class="reviews__slide__text text_normal">основатель Loftschool</p>
+              <svg class="icon icon-icon-quote grey-mode">
+                <use xlink:href="img/sprite.svg#icon-quote"></use>
+              </svg>
+              <p class="reviews__slide__text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
+              <div class="reviews__slide__contact"><img src="img/review-avatar.png" alt="">
+                <div class="reviews__slide__contact__info">
+                  <p class="reviews__slide__text text_bold text_green">Ковальчук Дмитрий</p>
+                  <p class="reviews__slide__text text_normal text_green">основатель Loftschool</p>
+                </div>
               </div>
             </div>
             <div class="reviews__slide">
-              <p class="reviews__slide__text"></p>
-              <div class="reviews__slide__contact"><img src="" alt="">
-                <p class="reviews__slide__text text_bold">Ковальчук Дмитрий</p>
-                <p class="reviews__slide__text text_normal">основатель Loftschool</p>
+              <svg class="icon icon-icon-quote grey-mode">
+                <use xlink:href="img/sprite.svg#icon-quote"></use>
+              </svg>
+              <p class="reviews__slide__text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
+              <div class="reviews__slide__contact"><img src="img/review-avatar.png" alt="">
+                <div class="reviews__slide__contact__info">
+                  <p class="reviews__slide__text text_bold text_green">Ковальчук Дмитрий</p>
+                  <p class="reviews__slide__text text_normal text_green">основатель Loftschool</p>
+                </div>
               </div>
             </div>
           </div>
@@ -129,17 +139,17 @@
             <form action="" method="">
               <h3 class="reviews__form__heading">Связаться со мной</h3>
               <div class="form-group">
-                <input type="text" name="text" placeholder="Имя">
+                <input class="reviews__form__input" type="text" name="text" placeholder="Имя">
               </div>
               <div class="form-group">
-                <input type="email" name="email" placeholder="Email">
+                <input class="reviews__form__input" type="email" name="email" placeholder="Email">
               </div>
-              <div class="form-group">
-                <textarea name="" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+              <div class="form-group mb20">
+                <textarea class="reviews__form__textarea" name="" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
               </div>
               <div class="form-group form-group_between">
-                <button type="submit" id="reviews__submit"></button>
-                <button type="submit" id="reviews__clear"></button>
+                <button class="reviews__button" type="submit" id="reviews__submit">Отправить</button>
+                <button class="reviews__button" type="submit" id="reviews__clear">Очистить</button>
               </div>
             </form>
           </div>

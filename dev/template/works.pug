@@ -27,7 +27,7 @@ block content
           viewbox="0 0 1000 100"
           preserveAspectRatio = "none"
           fill="red"
-          class="triangle about__triangles")
+          class="triangle about__triangles work__triangles")
             polygon(points="0,0 0,100 1000,100")
     .triangles__right
        svg(
@@ -35,7 +35,7 @@ block content
           viewbox="0 0 1000 100"
           preserveAspectRatio = "none"
           fill="red"
-          class="triangle about__triangles")
+          class="triangle about__triangles work__triangles")
             polygon(points="0,100 1000,100 1000,0")
   section.section.works
     .container
@@ -65,31 +65,35 @@ block content
           a(href="")
             +icon('portf_arrow_up', 'mod__white')
   section.works__reviews
-    .works__heading
-      h2 Что обо мне говорят
-    .works__reviews
+    .container
+      .works__heading.works__heading_about
+        h2 Что обо мне говорят
       .reviews__slider
         .reviews__slide
-          p.reviews__slide__text
+          +icon('icon-quote', 'grey-mode')
+          p.reviews__slide__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
           .reviews__slide__contact
-            img(src="", alt="")
-            p.reviews__slide__text.text_bold Ковальчук Дмитрий
-            p.reviews__slide__text.text_normal основатель Loftschool
+            img(src="img/review-avatar.png", alt="")
+            .reviews__slide__contact__info
+              p.reviews__slide__text.text_bold.text_green Ковальчук Дмитрий
+              p.reviews__slide__text.text_normal.text_green основатель Loftschool
         .reviews__slide
-            p.reviews__slide__text
-            .reviews__slide__contact
-              img(src="", alt="")
-              p.reviews__slide__text.text_bold Ковальчук Дмитрий
-              p.reviews__slide__text.text_normal основатель Loftschool
+          +icon('icon-quote', 'grey-mode')
+          p.reviews__slide__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+          .reviews__slide__contact
+            img(src="img/review-avatar.png", alt="")
+            .reviews__slide__contact__info
+              p.reviews__slide__text.text_bold.text_green Ковальчук Дмитрий
+              p.reviews__slide__text.text_normal.text_green основатель Loftschool
       .reviews__form
         form(action="" method="")
           h3.reviews__form__heading Связаться со мной
           .form-group
-            input(type="text" name="text" placeholder="Имя")
+            input(type="text" name="text" placeholder="Имя").reviews__form__input
           .form-group
-            input(type="email" name="email" placeholder="Email")
-          .form-group
-            textarea(name="", cols="30", rows="10", placeholder="Ваше сообщение")
+            input(type="email" name="email" placeholder="Email").reviews__form__input
+          .form-group.mb20
+            textarea(name="", cols="30", rows="10", placeholder="Ваше сообщение").reviews__form__textarea
           .form-group.form-group_between
-            button(type="submit")#reviews__submit
-            button(type="submit")#reviews__clear
+            button(type="submit").reviews__button#reviews__submit Отправить
+            button(type="submit").reviews__button#reviews__clear Очистить
