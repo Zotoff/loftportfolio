@@ -3,6 +3,7 @@
     height: 414px;
     background-color: rgba(255, 225, 255, .8);
     border-radius: 5px;
+    @include flex(center, center);
     & form {
         & .form-group {
             margin-bottom: 22px;
@@ -21,6 +22,7 @@
         width: 380px;
     }
 }
+
 .login__form__heading {
     @include bernier-regular;
     font-size: 35px;
@@ -85,6 +87,9 @@
         left: 20px;
 
     }
+}
+.text_normal {
+    text-transform: initial
 }
 
 .icon_user {

@@ -1,0 +1,116 @@
+extends ./template.pug
+block title
+  title Index
+block content
+  section.section.hero
+    .hero__bg
+      img(src="img/mountains-bg.png", alt="").hero__bg-img
+    ul.socials
+      each item in ['vk', 'github', 'in']
+        li.socials__item
+          a(href="" class=`socials__link socials__link_${item}`)
+            +icon(`${item}`, 'white_mod')
+    a(href="").hamburger
+      +icon('hamburger', 'beige_mod')
+    a(href="").down-arrow
+        +icon('arrow_down','beige_mod')
+    .hero__title
+      .user.hero__user-block
+        .user__photo
+          +webp('avatar', 'png')
+        .user__name Павел Зотов
+        .user__desc Веб-разработчик из Александрова
+  section.triangles
+    .triangles__left
+      svg(
+          width="49%"
+          viewbox="0 0 1000 100"
+          preserveAspectRatio = "none"
+          fill="red"
+          class="triangle about__triangles")
+            polygon(points="0,0 0,100 1000,100")
+    .triangles__right
+       svg(
+          width="49%"
+          viewbox="0 0 1000 100"
+          preserveAspectRatio = "none"
+          fill="red"
+          class="triangle about__triangles")
+            polygon(points="0,100 1000,100 1000,0")
+  section.section.about
+    .about__left
+      .about__content
+        .title.about__section-title
+          h2.about__section-title_heading Обо мне
+        .user-about
+          .user-about__picture
+            +webp('about__hero', 'png')
+          .user-about__title
+            .subtitle
+              | Кто я
+          .user-about__text
+            p Я веб разработчик из Александрова. Мне 33 года и я люблю фронт-энд. Мне нравится делать классные проекты. А еще я работаю инженером на заводе.
+            p Этот сайт я сделал с любовью к LoftSchool.
+    .about__right
+      .about-data
+        .about-data__description.about-user-info
+          .about-user-info__title
+            .subtitle Чем я могу быть полезен
+          .about-user-info__text
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam officia incidunt, quisquam sit harum totam, perspiciatis nesciunt, culpa at, laborum nobis error. In doloremque iusto rem, alias incidunt, expedita quos.
+        .about-data__content
+          ul.skills
+              each skill in ['Frontend']
+                  li.skills__item
+                    .skill-section
+                      .skill-section__title= skill
+                      ul.skill-section__list
+                        each skillTitle in ['html5', 'css3', 'JS & jQuery']
+                          li.skill-section__item
+                            .skill
+                              svg(width="130" height="130").skill__circle
+                                circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
+                                circle(r="50" cx="65" cy="65" stroke="#10c1a8" class="sector")
+                              .skill__name
+                                p= skillTitle
+              each skill in ['Backend']
+                  li.skills__item
+                    .skill-section
+                      .skill-section__title= skill
+                      ul.skill-section__list
+                        each skillTitle in ['php', 'mysql', 'NodeJS']
+                          li.skill-section__item
+                            .skill
+                              svg(width="130" height="130").skill__circle
+                                circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
+                                circle(r="50" cx="65" cy="65" stroke="#10c1a8" class="sector")
+                              .skill__name
+                                p= skillTitle
+              each skill in ['Workflow']
+                  li.skills__item
+                    .skill-section
+                      .skill-section__title= skill
+                      ul.skill-section__list
+                        each skillTitle in ['git', 'webpack', 'gulp']
+                          li.skill-section__item
+                            .skill
+                              svg(width="130" height="130").skill__circle
+                                circle(r="50" cx="65" cy="65" stroke="#ccc" fill="none")
+                                circle(r="50" cx="65" cy="65" stroke="#10c1a8" class="sector")
+                              .skill__name
+                                p= skillTitle
+  section.section.map
+    img(src="img/map.png", alt="")
+    .map__contacts
+      .map__contacts__wrapper
+        h2.subtitle Контакты
+        .map__contacts__item
+          +icon('skype', 'green_mod')
+          a(href="") fathummel
+        .map__contacts__item
+          +icon('envelope', 'green_mod')
+          a(href="mailto:paulzotoff@gmail.com") paulzotoff@gmail.com
+        .map__contacts__item
+          +icon('phone', 'green_mod')
+          a(href="tel:+79042543584") +7 904 254 35 84
+

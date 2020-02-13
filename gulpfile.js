@@ -21,6 +21,7 @@ $.gulp.task('default', $.gulp.series(
     $.gulp.parallel(
         'sass',
         'pug',
+        'js',
         'sprite:svg',
         'imageswebp',
         'imagescopy',
