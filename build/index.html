@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style/main.min.css">
+    <title>Логин</title>
+    <style>
+      .user-about__text p {
+        margin-bottom: 25px;
+      }
+      .user-about__text ul {
+        list-style: none;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="login">
+        <div class="authorize__btn" id="authorize__btn"><a href="">Авторизоваться</a></div>
+        <div class="container" id="login__container">
+          <div class="login__about" id="login__about">
+            <div class="login__about__img"><img src="img/avatar.png" alt=""></div>
+            <div class="login__about__info">
+              <h2 class="login__heading text_normal">Павел Зотов</h2>
+              <p class="login__subheading">Личный сайт веб-разработчика</p>
+            </div>
+            <div class="login__about__social">
+              <div class="login__about__social__item"><a class="socials__link socials__link_vk" href="">
+                  <svg class="icon icon-vk green_mod">
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                  </svg></a></div>
+              <div class="login__about__social__item"><a class="socials__link socials__link_github" href="">
+                  <svg class="icon icon-github green_mod">
+                    <use xlink:href="img/sprite.svg#github"></use>
+                  </svg></a></div>
+              <div class="login__about__social__item"><a class="socials__link socials__link_in" href="">
+                  <svg class="icon icon-in green_mod">
+                    <use xlink:href="img/sprite.svg#in"></use>
+                  </svg></a></div>
+            </div>
+            <div class="login__about__buttons"><a class="login__about__button" href="/works.html">Мои работы</a><a class="login__about__button" href="/about.html">Обо мне</a><a class="login__about__button" href="/blog.html">Блог</a></div>
+          </div>
+          <div class="login__form" id="login__form">
+            <form action="">
+              <h2 class="about__section-title_heading login__form__heading">Авторизуйтесь</h2>
+              <div class="form-group login__form__icon icon_user">
+                <input class="login__form__input" type="text" placeholder="Логин">
+              </div>
+              <div class="form-group login__form__icon icon_key">
+                <input class="login__form__input" type="password" placeholder="Пароль">
+              </div>
+              <div class="form-group__double_center">
+                <label class="login__form__checkbox__label" for="checkbox" id="login__form__checkbox__label">
+                  <input class="login__form__checkbox" type="checkbox" name="checkbox" checked="checked">
+                </label>
+                <p>Я не робот</p>
+              </div>
+              <div class="form-group">
+                <p class="text_centered mb10">Вы точно не робот?</p>
+                <div class="form-group__double_center">
+                  <div class="form-group__double__left">
+                    <label class="login__form__radio__label" for="radio" id="login__form__radio__label__yes">
+                      <input class="login__form__radio login__form__radio_left" type="radio" checked="checked">
+                    </label>
+                    <p>Да</p>
+                  </div>
+                  <div class="form-group__double__right">
+                    <label class="login__form__radio__label" for="radio" id="login__form__radio__label__no">
+                      <input class="login__form__radio login__form__radio_right" type="radio" checked="checked">
+                    </label>
+                    <p>Не уверен</p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group__double_between">
+                <div class="form-group__buttons__left">
+                  <button class="login__form__button" type="submit" id="login__form__button-main">На главную</button>
+                </div>
+                <div class="form-group__buttons__right">
+                  <button class="login__form__button" type="submit" id="login__form__button-submit">Войти</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer class="login__footer">
+        <div class="login__footer__text">
+          <p>&copy; Павел Зотов | Создано с любовью</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="js/app.js"></script>
+  <script></script>
+  <script></script>
+</html>

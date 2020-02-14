@@ -3,14 +3,23 @@
     height: 100vh;
     background: url('../img/mountains-bg.png') no-repeat center;
     background-size: cover;
-    @include flex(center, center);
+    @include flex(center, flex-start);
 }
 
 .login .container {
     width: 400px;
     height: auto;
     @include flex(center, center);
+    transition: transform .8s;
+    transform-style: preserve-3d;
+    position: relative;
+    margin-top: 250px;
 }
+
+.flip--y {
+    transform: rotateY(180deg);
+}
+
 .login__heading {
     @include roboto-medium;
     font-size: 28px;
@@ -28,11 +37,24 @@
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     @include flex(center, center);
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    z-index: 10;
 }
 .login__about__img {
     width: 147px;
     height: 147px;
     margin-top: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    & img {
+        width: 100%;
+        height: auto;
+    }
 }
 .login__about__info {
     @include flex(center, center);
@@ -60,7 +82,10 @@
 .login__about__buttons {
     @include flex(space-between, center);
     width: 100%;
-    height: auto;
+    height: 40px;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
 }
 .login__about__button {
     height: 45px;
@@ -80,17 +105,17 @@
         text-decoration: none;
     }
     &:first-child {
-        width: 155px;
-        border-right: 1px solid #ffffff;
+        width: 154px;
+        border-right: 1px solid rgba(255, 255, 255, .8);
     }
     &:nth-child(2) {
-        width: 125px;
-        border-left: 1px solid #ffffff;
-        border-right: 1px solid #ffffff;
+        width: 127px;
+        border-left: 1px solid rgba(255, 255, 255, .8);
+        border-right: 1px solid rgba(255, 255, 255, .8);
     }
     &:nth-child(3) {
-        width: 95px;
-        border-left: 1px solid #ffffff;
+        width: 97px;
+        border-left: 1px solid rgba(255, 255, 255, .8);
     }
 }
 .login__footer {

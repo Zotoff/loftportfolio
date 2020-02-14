@@ -6,6 +6,7 @@ global.$ = {
   gulp: require('gulp'),
   del: require('del'),
   webp: require('imagemin-webp'),
+  uglify: require('gulp-uglify-es'),
   cssunit: require('gulp-css-unit'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()

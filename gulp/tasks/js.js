@@ -8,6 +8,7 @@ module.exports = function() {
         .pipe($.gp.jshint.reporter('default'))
         .pipe($.gp.uglify())
         .pipe($.gp.concat('app.js'))
+        //.pipe($.gp.babel({presets: ['@babel/env', "@babel/preset-es2015"]}))
         .pipe($.gp.sourcemaps.write())
         .pipe($.gulp.dest($.config.root + '/js'));
     });

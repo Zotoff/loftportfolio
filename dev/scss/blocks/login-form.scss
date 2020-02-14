@@ -1,10 +1,21 @@
 .login__form {
     width: 380px;
     height: 414px;
-    background-color: rgba(255, 225, 255, .8);
+    background-color: rgba(255, 255, 255, .8);
     border-radius: 5px;
     @include flex(center, center);
+
+    transform: rotateY(180deg);
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    z-index: 20;
+
     & form {
+        width: 100%;
         & .form-group {
             margin-bottom: 22px;
         }
@@ -106,14 +117,14 @@
 .login__form__input {
     width: 300px;
     height: 45px;
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     border-radius: 5px;
     border: none;
     outline: none;
     position: relative;
 
-    padding-left: 25px;
-    margin-left: 60px;
+    padding-left: 20px;
+    margin-left: 55px;
 
     @include phone_small(){
         width: 75%;
@@ -157,15 +168,18 @@
     background-color: $green;
     color: #ffffff;
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: -3px;
+    top: -3px;
     z-index: -1;
 }
 .login__form__checkbox__label  {
     position: relative;
-    left: -5px;
+    left: -10px;
     width: 20px;
     height: 20px;
+    background: url('../img/checkbox_unchecked.png') no-repeat center;
+}
+.login__form__checkbox__label_checked {
     background: url('../img/checkbox_checked.png') no-repeat center;
 }
 .text_centered {
@@ -200,15 +214,15 @@
     width: 18px;
     height: 18px;
     position: absolute;
-    top: 0px;
+    top: -2px;
 
 }
 .login__form__radio_left {
-    left: 0px;
+    left: -3px;
     z-index: -1;
 }
 .login__form__radio_right {
-    left: 0px;
+    left: -3px;
     z-index: -1;
 }
 .login__form__radio__label {
@@ -217,6 +231,9 @@
     background: url('../img/radio_unchecked.png') no-repeat center;
     position: relative;
     margin-right: 12px;
+}
+.login__form__radio__label_checked {
+    background: url('../img/radio_checked.png') no-repeat center;
 }
 .form-group__double__left p,
 .form-group__double__right p {
