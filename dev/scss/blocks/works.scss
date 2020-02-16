@@ -171,11 +171,22 @@
     width: 100%;
     height: 330px;
     margin-bottom: 100px;
+    overflow: hidden;
     @include flex(center, center);
+    position: relative;
     & img {
-        width: 420px;
+        width: 100%;
         height: auto;
+
+        position: absolute;
+
+        left: 0px;
+
+        transition: all .5s ease-in;
     }
+}
+.works__slides__item_active {
+    top: -100%;
 }
 .works__slider__controls {
     width: 100%;

@@ -168,3 +168,40 @@
 .about-data__content {
   width: 100%;
 }
+
+
+/*Animations*/
+.animate {
+  opacity: 0;
+  position: relative;
+}
+.toRight {
+  animation: toRight 1s;
+  animation-fill-mode: forwards; // чтобы анимация после завершения оставалась на месте
+}
+@keyframes toRight {
+  from {
+    opacity: 0;
+    left: -200px;
+  }
+  to {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+.toLeft {
+  animation: toLeft 1s;
+  animation-fill-mode: forwards; // чтобы анимация после завершения оставалась на месте
+}
+
+@keyframes toLeft {
+  from {
+    opacity: 0;
+    right: -200px;
+  }
+  to {
+    opacity: 1;
+    right: 0px;
+  }
+}

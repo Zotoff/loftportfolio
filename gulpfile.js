@@ -9,7 +9,8 @@ global.$ = {
   uglify: require('gulp-uglify-es'),
   cssunit: require('gulp-css-unit'),
   browserSync: require('browser-sync').create(),
-  gp: require('gulp-load-plugins')()
+  gp: require('gulp-load-plugins')(),
+  requirejs: require('requirejs')
 };
 
 // Require all paths

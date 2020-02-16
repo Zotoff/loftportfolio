@@ -91,13 +91,13 @@
           </div>
         </div>
         <div class="works__slider__right">
-          <div class="works__slides"><img src="img/works-slides.png" alt=""></div>
+          <div class="works__slides"><img class="works__slides__item works__slides__item_active" src="img/works-slides.png" alt=""><img class="works__slides__item" src="img/works-slides.png" alt=""><img class="works__slides__item" src="img/works-slides.png" alt=""><img class="works__slides__item" src="img/works-slides.png" alt=""></div>
           <div class="works__slider__controls">
-            <div class="works__slider__controls__left"><img src="img/works-mockup-1.png" alt=""><a href="">
+            <div class="works__slider__controls__left"><img src="img/works-mockup-1.png" alt=""><a class="slider__controls__bottom" href="">
                 <svg class="icon icon-portf_arrow_down mod__white">
                   <use xlink:href="img/sprite.svg#portf_arrow_down"></use>
                 </svg></a></div>
-            <div class="works__slider__controls__right"><img src="img/works-mockup-1.png" alt=""><a href="">
+            <div class="works__slider__controls__right"><img src="img/works-mockup-1.png" alt=""><a class="slider__controls__top" href="">
                 <svg class="icon icon-portf_arrow_up mod__white">
                   <use xlink:href="img/sprite.svg#portf_arrow_up"></use>
                 </svg></a></div>
@@ -156,6 +156,12 @@
         </div>
       </section>
     </div>
+    <div class="preloader">
+      <div class="preloader__spinner">
+        <div class="preloader__animation"></div>
+        <div class="preloader__percents">0%</div>
+      </div>
+    </div>
     <footer>
       <div class="footer__top">
         <div class="footer__top__left">
@@ -191,6 +197,7 @@
         </div>
         <div class="footer__bottom__right">
           <div class="footer__bottom__text">&copy; Павел Зотов
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
             <script src="js/app.js"></script>
             <script></script>
             <script></script>

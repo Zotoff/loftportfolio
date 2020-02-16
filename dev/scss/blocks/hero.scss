@@ -1,12 +1,24 @@
 .hero {
-  height: 600px;
+  height: 100vh;
   overflow: hidden;
   position: relative;
 }
 
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1270px;
+  & img {
+    display: blocl;
+    width: 100%;
+    height: auto;
+  }
+}
+
 .hero__title {
   position: absolute;
-  top: 70%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);

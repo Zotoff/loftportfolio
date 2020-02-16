@@ -1,12 +1,11 @@
 'use strict';
-
 module.exports = function() {
     $.gulp.task('js', function(){
         return $.gulp.src('./dev/template/js/*.js')
         .pipe($.gp.sourcemaps.init())
         .pipe($.gp.jshint())
         .pipe($.gp.jshint.reporter('default'))
-        .pipe($.gp.uglify())
+        //.pipe($.gp.uglify())
         .pipe($.gp.concat('app.js'))
         //.pipe($.gp.babel({presets: ['@babel/env', "@babel/preset-es2015"]}))
         .pipe($.gp.sourcemaps.write())
