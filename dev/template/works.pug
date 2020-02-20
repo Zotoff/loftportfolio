@@ -54,17 +54,27 @@ block content
             | Посмотреть сайт
     .works__slider__right
       .works__slides
-          img(src="img/works-slides.png", alt="").works__slides__item.works__slides__item_active
           img(src="img/works-slides.png", alt="").works__slides__item
+          img(src="img/arsdiezel.png", alt="").works__slides__item
           img(src="img/works-slides.png", alt="").works__slides__item
           img(src="img/works-slides.png", alt="").works__slides__item
       .works__slider__controls
         .works__slider__controls__left
-          img(src="img/works-mockup-1.png", alt="")
+          .works__slides__item
+            img(src="img/arsdiezel.png", alt="")
+          .works__slides__item
+            img(src="img/germi-salon.png", alt="")
           a(href="").slider__controls__bottom
             +icon('portf_arrow_down', 'mod__white')
         .works__slider__controls__right
-          img(src="img/works-mockup-1.png", alt="")
+          .works__slides__item
+            img(src="img/works-mockup-1.png", alt="")
+          .works__slides__item
+            img(src="img/arsdiezel.png", alt="")
+          .works__slides__item.works__slides__item_active
+            img(src="img/germi-salon.png", alt="")
+          .works__slides__item
+            img(src="img/pintora.png", alt="")
           a(href="").slider__controls__top
             +icon('portf_arrow_up', 'mod__white')
   section.works__reviews

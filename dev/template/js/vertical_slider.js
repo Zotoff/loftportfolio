@@ -9,6 +9,7 @@ var slider = (function(){
 
 
     if(counter >= items.length) {
+      console.log('Counter stop: ' + counter);
       counter = 0;
     }
 
@@ -17,19 +18,25 @@ var slider = (function(){
     activeItem.animate({
       'top': direction + '%'
     }, duration);
+
     reqItem.animate({
       'top': '0'
     }, duration, function(){
-      activeItem.removeCLass('active').css('top', '-' + direction + '%');
-      jQuery(this).addClass('active');
+      activeItem.removeClass('works__slides__item_active').css('top', '' + direction + '%');
+      jQuery(this).addClass('works__slides__item_active');
     });
+
+    // function(){
+    //   activeItem.removeCLass('active').css('top', '-' + direction + '%');
+    //   jQuery(this).addClass('active');
+    // }
   };
 
   return {
     init: function(){
       jQuery('.slider__controls__top').on('click', function(e){
         e.preventDefault();
-        moveSlide(jQuery('.works__slides'), 'up');
+        moveSlide(jQuery('.works__slider__controls__right'), 'up');
         counter++;
       });
     }

@@ -177,7 +177,17 @@
     & img {
         width: 100%;
         height: auto;
-
+    }
+}
+.works__slides__item {
+    width: 100%;
+    height: 100%;
+    @include flex(center, center);
+    position: absolute;
+    left: 0px;
+    & img {
+        width: 100%;
+        height: auto;            
         position: absolute;
 
         left: 0px;
@@ -186,7 +196,7 @@
     }
 }
 .works__slides__item_active {
-    top: -100%;
+    top: 0px;
 }
 .works__slider__controls {
     width: 100%;
@@ -198,10 +208,20 @@
         height: 100%;
         @include flex(center, center);
         position: relative;
-        & img {
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+    
             width: 100%;
-            height: auto;
+            height: 100%;
+            
+            background-color: rgba(196, 194, 190, .6);
+
+            z-index: 1000;
         }
+        
         & a {
             width: 45px;
             height: 30px;
@@ -210,11 +230,18 @@
             left: 50%;
             margin-left: -22.5px;
             top: 50%;
+            z-index: 2000;
             & svg {
                 width: 100%;
                 height: 100%;
                 fill: $white;
             }
+        }
+        & .works__slides__item {
+            top: 100%;
+        }
+        & .works__slides__item_active {
+            top: 0px;
         }
     }
 }
