@@ -91,25 +91,31 @@ html {
           position: absolute;
       }
       &::before {
-        top: 13px;
-        left: 13px;
+       
         border: 3px solid transparent;
         border-top-color: #ffffff;
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         animation: spin 2s linear infinite;
       }
       &::after {
-        top: 5px;
-        left: 5px;
         border: 3px solid transparent;
         border-top-color: #ffffff;
-        width: 150px;
-        height: 150px;
         border-radius: 50%;
         animation: spin 5s linear infinite;
     }
+    
+  }
+  .preloader__animation::before {
+    top: -30px;
+    left: -30px;
+  }
+  .preloader__animation::after {
+    width: 85%;
+    height: 85%;
+    top: 10px;
+    left: 10px;
   }
 
   @keyframes spin {

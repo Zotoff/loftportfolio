@@ -177,6 +177,10 @@
     & img {
         width: 100%;
         height: auto;
+        object-fit: contain;
+        position: absolute;
+        top: 0px;
+        left: 0px;
     }
 }
 .works__slides__item {
