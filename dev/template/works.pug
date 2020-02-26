@@ -103,14 +103,14 @@ block content
               p.reviews__slide__text.text_bold.text_green Ковальчук Дмитрий
               p.reviews__slide__text.text_normal.text_green основатель Loftschool
       .reviews__form
-        form(action="" method="")
+        form(action="", method="")#reviews__form
           h3.reviews__form__heading Связаться со мной
           .form-group
-            input(type="text" name="text" placeholder="Имя").reviews__form__input
+            input(type="text" name="name" placeholder="Имя").reviews__form__input
           .form-group
             input(type="email" name="email" placeholder="Email").reviews__form__input
           .form-group.mb20
-            textarea(name="", cols="30", rows="10", placeholder="Ваше сообщение").reviews__form__textarea
+            textarea(name="message", cols="30", rows="10", placeholder="Ваше сообщение").reviews__form__textarea
           .form-group.form-group_between
             button(type="submit").reviews__button#reviews__submit Отправить
             button(type="submit").reviews__button#reviews__clear Очистить

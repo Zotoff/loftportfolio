@@ -48,7 +48,6 @@ var slider = (function(){
 
   return {
     init: function(){
-      console.log(slides);
       jQuery('.slider__controls__top').on('click', function(e){
         e.preventDefault();
         moveSlide(jQuery('.works__slider__controls__right'), 'up');
