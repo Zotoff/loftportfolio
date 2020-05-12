@@ -91,25 +91,32 @@ html {
           position: absolute;
       }
       &::before {
-        top: -16px;
-        left: -6px;
-        border: 3px solid transparent;
-        border-top-color: #ffffff;
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        animation: spin 2s linear infinite;
-      }
-      &::after {
-        top: -25px;
-        left: -30px;
-        border: 3px solid transparent;
+
+       border: 3px solid transparent;
         border-top-color: #ffffff;
         width: 200px;
         height: 200px;
         border-radius: 50%;
+        animation: spin 2s linear infinite;
+      }
+      &::after {
+
+        border: 3px solid transparent;
+        border-top-color: #ffffff;
+        border-radius: 50%;
         animation: spin 5s linear infinite;
     }
+    
+  }
+  .preloader__animation::before {
+    top: -30px;
+    left: -30px;
+  }
+  .preloader__animation::after {
+    width: 85%;
+    height: 85%;
+    top: 10px;
+    left: 10px;
   }
 
   @keyframes spin {
@@ -119,4 +126,8 @@ html {
       to {
         transform: rotate(360deg);
       }
+  }
+
+  .input_error {
+    border: 1px solid #e44845 !important;
   }
