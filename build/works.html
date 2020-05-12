@@ -20,6 +20,11 @@
     </style>
   </head>
   <body>
+    <div class="mainMenu" id="mainMenu">
+      <div class="mainMenu__container">
+        <div class="mainMenu__wrapper"><a class="mainMenu__link text--uppercase text--bold" href="/works.html">Мои работы</a><a class="mainMenu__link text--uppercase text--bold" href="/about.html">Обо мне</a><a class="mainMenu__link text--uppercase text--bold" href="/blog.html">Блог</a><a class="mainMenu__link text--uppercase text--bold" href="/index.html">Авторизация</a></div>
+      </div>
+    </div>
     <div class="wrapper">
       <section class="section hero">
         <div class="hero__bg"><img class="hero__bg-img" src="img/mountains-bg.png" alt=""></div>
@@ -36,10 +41,7 @@
               <svg class="icon icon-in white_mod">
                 <use xlink:href="img/sprite.svg#in"></use>
               </svg></a></li>
-        </ul><a class="hamburger" href="">
-          <svg class="icon icon-hamburger beige_mod">
-            <use xlink:href="img/sprite.svg#hamburger"></use>
-          </svg></a><a class="down-arrow" href="">
+        </ul><a class="hamburger" href="" id="hamburger"><span></span><span></span><span></span></a><a class="down-arrow" href="">
           <svg class="icon icon-arrow_down beige_mod">
             <use xlink:href="img/sprite.svg#arrow_down"></use>
           </svg></a>
